@@ -1,63 +1,53 @@
+<!DOCTYPE html>
 <html>
 <head>
-     <title>Firebase Demo</title>
-
-
-     <style>
-           body{
-                font-family:Arial;
-                background:#f4f4f4;
+    <title>Firebase Demo</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
         }
         
-        .container{
-            width:350px;
-            margin:50px auto;
-            background:#fff;
-            padding:20px;
-            border-radius:10px;
-            box-shadow:0 0 10px gray;
+        .container {
+            width: 350px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
         }
 
-         input{
-             width:95%;
-             padding:10px;
-             margin:8px 0;
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 8px 0;
         }
   
-     button{
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
 
-               padding:10px 20px;
-               margin:5px;
-               cursor:pointer;
-            }
-
-           #output{
-               margin-top:20px;
-            }
-         const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
-  </style>
-
-<head>
+        #output {
+            margin-top: 20px;
+        }
+    </style>
+</head>
 
 <body>
+    <div class="container">
+        <h2>Firebase Student Database</h2>
+        
+        <input id="name" placeholder="Enter Name">
+        <input id="age" type="number" placeholder="Enter Age">
 
-<div class="container">
-     <h2>firebase student Database</h2>
-     
-  <input id="name" placeholder="Enter Name">
-<input id="age" type="number" placeholder="Enter Age">
+        <button onclick="saveData()">Save</button>
+        <button onclick="loadData()">Show Data</button>
 
-<button onclick="saveData()">Save</button>
-<button onclick="loadData()">Show Data</button>
+        <div id="output"></div>
+    </div>
 
-<div id="output"></div>
-
-     
-<div>
-
-<script type="module" src="script.js"></script>
-
-
+    <script type="module" src="script.js"></script>
 </body>
 </html>
